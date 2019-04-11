@@ -4,9 +4,10 @@
   "description": ":b:arbershop :b:anter",
   "main": "index.js",
   "scripts": {
-    "test": "tape src/tests/*.test.js | tap-bunny",
-    "start": "node src/server.js",
-    "live": "nodemon src/server.js"
+    "test": "NODE_ENV=test tape src/tests/*.test.js | tap-bunny",
+    "start": "NODE_ENV=start node src/server.js",
+    "live": "NODE_ENV=start nodemon src/server.js",
+    "build": "NODE_ENV=build node src/databases/build.js"
   },
   "repository": {
     "type": "git",
