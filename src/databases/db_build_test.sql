@@ -32,7 +32,9 @@ CREATE TABLE reviews (
 );
 
 INSERT INTO reviews (person_name, business_id, rating, freshness, tv_quality, banter, mirror_coverage, comment)
-VALUES ('James', 1, 4, 5, 4, 3, 0, 'Very happy with my haircut');
+VALUES ('James', 1, 4, 5, 4, 3, 0, 'Very happy with my haircut'),
+('Burhan', 2, 5, 4, 3, 4, 1, 'Not great barber'),
+('Burhanda', 1, 3, 3, 3, 3, 3, 'Distinctly average');
 
 
 COMMIT;
