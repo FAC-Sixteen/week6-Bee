@@ -9,8 +9,8 @@ const router = (request, response) => {
     handler.homeHandler(response);
   }
 
-  else if (url === '/getreview') {
-    handler.getReviewHandler(request, response);
+  else if (url.includes('/getreview')) {
+    handler.getReviewHandler(request, response, url);
   }
 
   else if (url.includes('public')){
@@ -23,7 +23,7 @@ const router = (request, response) => {
 
 else if (method === "POST") {
   if (url === '/getreview') {
-    console.log("Here's request: ", request);
+    // console.log("Here's request: ",request.url);
     handler.getReviewHandler(request, response);
   }
 }

@@ -2,7 +2,7 @@ const fs = require('fs');
 const querystring = require('query-string');
 const path = require('path');
 const getReviews = require('./queries/getReviews');
-
+const urlMod = require('url');
 
 const homeHandler = (res) => {
   fs.readFile(path.join(__dirname, '../public/index.html'), (err, file) => {
@@ -44,8 +44,12 @@ const publicHandler = (req, res) => {
 };
 
 const getReviewHandler = (req, res) => {
-  
-}
+
+  let parsedQuery = urlMod.parse(req.url, true);
+  const barberVal= parsedQuery.query.q;
+  console.log(barberVal);
+
+};
 
 module.exports = {
   homeHandler,

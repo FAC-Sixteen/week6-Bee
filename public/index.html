@@ -8,13 +8,19 @@
 </head>
 <body>
   <h1>Rate My Barber</h1>
-    <form class="" action="/getreview" method="post">
-      <input type="text" name="" value="">
-      <button type="submit" name="button">Search barber</button>
-    </form>
-    <form class="" action="/postreview" method="post">
-      <input type="text" name="business_name" value="" placeholder="Enter Business Name" required>
-      <input type="text" name="person_name" value="" placeholder="Enter Person Name" required>
+
+  <!-- this searches barber database -->
+    <section>
+      <input type="text" name="" value="" id="input-field-barber">
+      <button type="submit" name="button" id="barber-button">Search barber</button>
+    </section>
+
+
+
+    <!-- this is posts data to our database -->
+    <section>
+      <input type="text" name="business_name" value="" placeholder="Enter Business Name" id="business-name" required>
+      <input type="text" name="person_name" value="" placeholder="Enter Person Name" id="person-name" required>
       <label for="rating">Rating:</label>
       <select class="" name="rating" id="rating">
         <option value="">Select Rating</option>
@@ -60,9 +66,10 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <textarea type="text" name="comment" value="" placeholder="Enter comment..." maxlength="400" rows="5" required></textarea>
-      <button type="submit">Submit Review</button>
-    </form>
+      <textarea type="text" name="comment" value="" placeholder="Enter comment..." maxlength="400" rows="5" id="comment" required></textarea>
+      <button type="submit" id="review-button">Submit Review</button>
+    </section>
+
     <script type="text/javascript" src="./public/script.js"></script>
 </body>
 </html>
