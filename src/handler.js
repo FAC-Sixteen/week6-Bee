@@ -1,6 +1,7 @@
 const fs = require('fs');
-// const querystring = require('querystring');
+const querystring = require('query-string');
 const path = require('path');
+const getReviews = require('./queries/getReviews');
 
 
 const homeHandler = (res) => {
@@ -42,7 +43,12 @@ const publicHandler = (req, res) => {
   });
 };
 
+const getReviewHandler = (req, res) => {
+  
+}
+
 module.exports = {
   homeHandler,
-  publicHandler
+  publicHandler,
+  getReviewHandler
 }
