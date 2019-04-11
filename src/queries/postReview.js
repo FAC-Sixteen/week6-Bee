@@ -7,7 +7,6 @@ const postReviews = (obj, cb) => {
       return cb(err);
     }
     cb(null);
-
   })
 }
 

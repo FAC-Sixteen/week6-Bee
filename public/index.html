@@ -3,11 +3,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rate My Barber</title>
     <link rel="stylesheet" href="./public/main.css">
 </head>
 <body>
-    sdkfnsldNF;Ln;lFN;dlnf;ldsNs;dlfnsdl;kFNsd;lkfnds;lcnds;
+  <h1>Rate My Barber</h1>
+    <form class="" action="/getreview" method="get">
+      <input type="text" name="" value="">
+      <button type="submit" name="button">Search barber</button>
+    </form>
+    <form class="" action="/postreview" method="post">
+      <input type="text" name="business_name" value="" placeholder="Enter Business Name" required>
+      <input type="text" name="person_name" value="" placeholder="Enter Person Name" required>
+      <label for="rating">Rating:</label>
+      <select class="" name="rating" id="rating">
+        <option value="">Select Rating</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="freshness">Freshness:</label>
+      <select class="" name="freshness" id="freshness">
+        <option value="">Select Freshness</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="tv_quality">TV Quality:</label>
+      <select class="" name="tv_quality" id="tv_quality">
+        <option value="">Select TV Quality</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="banter">Banter:</label>
+      <select class="" name="banter" id="banter">
+        <option value="">Select Banter Level</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="mirror_coverage">Mirror Coverage:</label>
+      <select class="" name="mirror_coverage" id="mirror_coverage">
+        <option value="">Select Mirror Coverage</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <textarea type="text" name="comment" value="" placeholder="Enter comment..." maxlength="400" rows="5" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
     <script type="text/javascript" src="./public/script.js"></script>
 </body>
 </html>
