@@ -1,6 +1,7 @@
 const test = require("tape");
 const runDbBuild = require("../databases/db_build");
 const getReviews = require('../queries/getReviews');
+const postReview = require('../queries/postReview');
 
 test("testing databse build", t => {
   runDbBuild((err, res) => {
@@ -20,3 +21,26 @@ test("testing getReviews returns a result", t => {
     })
   })
 })
+
+const obj = {
+  person_name: 'Danny',
+  business_id: 1,
+  rating: 3,
+  freshness: 3,
+  tv_quality: 3,
+  banter: 3,
+  mirror_coverage: 3,
+  comment: 'Not too bad'  
+};
+
+test("testing postReviews adds something to database", t => {
+  runDbBuild((err,res) => {
+    postReview(obj, error => {
+      t.equals(error, null, 'error should return undefined');
+      getReviews("Frank's Fresh Cuts", (errr, response) => {
+        t.equals(response.length, 3, 'should get 3 results');
+        t.end();
+      });
+    });
+  });
+});
