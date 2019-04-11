@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-bunny",
     "start": "NODE_ENV=start node src/server.js",
     "live": "NODE_ENV=start nodemon src/server.js",
-    "build": "NODE_ENV=build node src/databases/build.js"
+    "build_db": "NODE_ENV=build node src/databases/build.js"
   },
   "repository": {
     "type": "git",
