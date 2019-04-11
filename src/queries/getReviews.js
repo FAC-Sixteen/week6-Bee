@@ -11,6 +11,7 @@ const getReviews = (business, cb) => {
       return cb(err);
     }
     cb(null, res.rows);
+    // console.log("Res.rows: ", res.rows);
 
   })
 }
