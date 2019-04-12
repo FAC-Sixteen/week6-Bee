@@ -1,10 +1,8 @@
-# week6-Bee
-
-:b:arbershop :b:anter
-
-creating a web app that allows you to browse and review local :b:arbershops for how fresh they are.
+Creating a web app that allows you to browse and review local :b:arbershops for how fresh they are.
 
 # week 6 Team :b::bee:
+
+:b:arbershop :b:anter
 
 ## Rate My Barber
 
