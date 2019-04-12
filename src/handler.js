@@ -3,6 +3,7 @@ const querystring = require("query-string");
 const path = require("path");
 const getReviews = require("./queries/getReviews");
 const postReview = require("./queries/postReview");
+const getBusinesses = require("./queries/getBusinesses");
 const urlMod = require("url");
 
 const homeHandler = res => {
@@ -71,9 +72,21 @@ const postReviewHandler = (req, res) => {
   });
 };
 
+const getBusinessesHandler = (req, res) => {
+  getBusinesses((err, response) => {
+    if (err) {
+      res.writeHead(500, { "Content-Type": "text/html" });
+      res.end("server error");
+    }
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(response));
+  });
+};
+
 module.exports = {
   homeHandler,
   publicHandler,
   getReviewHandler,
-  postReviewHandler
+  postReviewHandler,
+  getBusinessesHandler
 };
