@@ -12,6 +12,9 @@ This repo contains our team project for Week 4 of Founders and Coders - Rate My 
 
 Don't keep your lit lid under wraps - share the love with Rate My Barber!
 
+## Figma Mockup
+https://www.figma.com/file/MEeyaOiTKrDVRqjaccFsivQk/Untitled?node-id=0%3A1
+
 ## Installation Instructions
 
 1. git clone https://github.com/FAC-Sixteen/week6-Bee.git
