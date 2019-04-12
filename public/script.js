@@ -1,6 +1,7 @@
 // search barber
 const inputField = document.getElementById("select-barber");
 const button = document.getElementById("barber-button");
+const gotContent = document.getElementById("gotContent");
 
 const barberQuery = () => {
   const xhr = new XMLHttpRequest();
@@ -8,7 +9,18 @@ const barberQuery = () => {
 
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
+      gotContent.innerHTML = "";
       console.log(xhr.response);
+      JSON.parse(xhr.response).map(obj => {
+        const paragraph = document.createElement("p");
+        const newline = document.createElement("br");
+        const pContent = `Reviewer: ${obj.person_name}
+        Rating: ${obj.rating}
+        Comment: ${obj.comment}`;
+        paragraph.textContent = pContent;
+        gotContent.appendChild(paragraph);
+        gotContent.appendChild(newline);
+      });
     }
   };
 
@@ -32,7 +44,7 @@ const barberReview = () => {
 
   //feeding all barber form values into our url
   const endpoint = `/getreview?business_name=${
-    businessName.textContent
+    businessName.value
   }&person_name=${personName.value}&rating=${rating.value}&freshness=${
     freshness.value
   }&tv_quality=${tvQuality.value}&banter=${banter.value}&mirror_coverage=${
@@ -58,7 +70,9 @@ const updateSelect = json => {
     const option = document.createElement("option");
     const option2 = document.createElement("option");
     option.textContent = obj.name;
+    option.value = obj.name;
     option2.textContent = obj.name;
+    option2.value = obj.name;
     inputField.appendChild(option);
     businessName.appendChild(option2);
   });
