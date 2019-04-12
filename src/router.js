@@ -11,6 +11,8 @@ const router = (request, response) => {
       handler.getReviewHandler(request, response, url);
     } else if (url.includes("public")) {
       handler.publicHandler(request, response);
+    } else if (url === "/getbusinesses") {
+      handler.getBusinessesHandler(request, response);
     } else {
       return;
       // handler.errorHandler(request, response);

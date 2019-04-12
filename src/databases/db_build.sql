@@ -12,7 +12,10 @@ CREATE TABLE businesses (
 );
 
 INSERT INTO businesses (name, building_number_name, street_name, postcode, website)
-VALUES ('Frank''s Fresh Cuts', '123', 'Fake Street', 'AB12 3CD', 'https://www.google.com'), ('Number One All Over', '10', 'Downing Street', 'WC1H 8BW', '');
+VALUES ('Frank''s Fresh Cuts', '123', 'Fake Street', 'AB12 3CD', 'https://www.google.com'),
+('Number One All Over', '10', 'Downing Street', 'WC1H 8BW', ''),
+('Bee Cuts', '94', 'jazz street', 'BEE 833', 'https://www.bee.com'),
+('Buzz Cuts', '34', 'prison', '123 asd', '');
 
 CREATE TABLE reviews (
   id SERIAL PRIMARY KEY,

@@ -1,26 +1,33 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rate My Barber</title>
-    <link rel="stylesheet" href="./public/main.css">
-</head>
-<body>
-  <h1>Rate My Barber</h1>
+    <link rel="stylesheet" href="./public/main.css" />
+  </head>
+  <body>
+    <h1>Rate My Barber</h1>
 
-  <!-- this searches barber database -->
+    <!-- this searches barber database -->
     <section>
-      <input type="text" name="" value="" id="input-field-barber">
-      <button type="submit" name="button" id="barber-button">Search barber</button>
+      <select name="businesses" id="select-barber"></select>
+      <button type="submit" name="button" id="barber-button">
+        Search barber
+      </button>
     </section>
-
-
 
     <!-- this is posts data to our database -->
     <section>
-      <input type="text" name="business_name" value="" placeholder="Enter Business Name" id="business-name" required>
-      <input type="text" name="person_name" value="" placeholder="Enter Person Name" id="person-name" required>
+      <select name="business_name" id="business-name" required></select>
+      <input
+        type="text"
+        name="person_name"
+        value=""
+        placeholder="Enter Person Name"
+        id="person-name"
+        required
+      />
       <label for="rating">Rating:</label>
       <select class="" name="rating" id="rating">
         <option value="">Select Rating</option>
@@ -66,10 +73,19 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <textarea type="text" name="comment" value="" placeholder="Enter comment..." maxlength="400" rows="5" id="comment" required></textarea>
+      <textarea
+        type="text"
+        name="comment"
+        value=""
+        placeholder="Enter comment..."
+        maxlength="400"
+        rows="5"
+        id="comment"
+        required
+      ></textarea>
       <button type="submit" id="review-button">Submit Review</button>
     </section>
 
     <script type="text/javascript" src="./public/script.js"></script>
-</body>
+  </body>
 </html>

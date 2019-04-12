@@ -1,5 +1,5 @@
 // search barber
-const inputField = document.getElementById("input-field-barber");
+const inputField = document.getElementById("select-barber");
 const button = document.getElementById("barber-button");
 
 const barberQuery = () => {
@@ -32,7 +32,7 @@ const barberReview = () => {
 
   //feeding all barber form values into our url
   const endpoint = `/getreview?business_name=${
-    businessName.value
+    businessName.textContent
   }&person_name=${personName.value}&rating=${rating.value}&freshness=${
     freshness.value
   }&tv_quality=${tvQuality.value}&banter=${banter.value}&mirror_coverage=${
@@ -47,6 +47,21 @@ const barberReview = () => {
 
   xhr.open("POST", endpoint, true);
   xhr.send();
+};
+
+fetch("/getbusinesses")
+  .then(res => res.json())
+  .then(json => updateSelect(json));
+
+const updateSelect = json => {
+  json.map(obj => {
+    const option = document.createElement("option");
+    const option2 = document.createElement("option");
+    option.textContent = obj.name;
+    option2.textContent = obj.name;
+    inputField.appendChild(option);
+    businessName.appendChild(option2);
+  });
 };
 
 reviewButton.addEventListener("click", barberReview, true);
