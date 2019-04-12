@@ -34,6 +34,8 @@ GRANT ALL PRIVILEGES ON DATABASE superheroes TO marvel;
 9. Head back to your .env file in your code editor and add the line:
 ```DB_URL=postgres://marvel:abcd@localhost:5432/superheroes```
 
+You also need to add a TEST_DB_URL to the env for testing, its recommended to use a different database for this.
+
 10. Go back to the terminal and run your database build file (db_build.js):
 ```node database/db_build.js```
 
