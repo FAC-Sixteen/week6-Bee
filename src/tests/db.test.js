@@ -10,7 +10,38 @@ test("testing databse build", t => {
   });
 });
 
-const baseDbGenerated = [ { id: 1, person_name: 'James', business_id: 1, rating: 4, freshness: 5, tv_quality: 4, banter: 3, mirror_coverage: 0, comment: 'Very happy with my haircut', name: 'Frank\'s Fresh Cuts', building_number_name: '123', street_name: 'Fake Street', postcode: 'AB12 3CD', website: 'https://www.google.com' }, { id: 1, person_name: 'Burhanda', business_id: 1, rating: 3, freshness: 3, tv_quality: 3, banter: 3, mirror_coverage: 3, comment: 'Distinctly average', name: 'Frank\'s Fresh Cuts', building_number_name: '123', street_name: 'Fake Street', postcode: 'AB12 3CD', website: 'https://www.google.com' } ];
+const baseDbGenerated = [
+  { id: 1,
+    person_name: 'James',
+    business_id: 1,
+    rating: 4,
+    freshness: 5,
+    tv_quality: 4,
+    banter: 3,
+    mirror_coverage: 0,
+    comment: 'Very happy with my haircut',
+    name: 'Frank\'s Fresh Cuts',
+    building_number_name: '123',
+    street_name: 'Fake Street',
+    postcode: 'AB12 3CD',
+    website: 'https://www.google.com'
+  },
+{ id: 1,
+  person_name: 'Burhanda',
+  business_id: 1,
+  rating: 3,
+  freshness: 3,
+  tv_quality: 3,
+  banter: 3,
+  mirror_coverage: 3,
+  comment: 'Distinctly average',
+  name: 'Frank\'s Fresh Cuts',
+  building_number_name: '123',
+  street_name: 'Fake Street',
+  postcode: 'AB12 3CD',
+  website: 'https://www.google.com'
+}
+];
 
 test("testing getReviews returns a result", t => {
   runDbBuild((err, res) => {
@@ -30,7 +61,7 @@ const obj = {
   tv_quality: 3,
   banter: 3,
   mirror_coverage: 3,
-  comment: 'Not too bad'  
+  comment: 'Not too bad'
 };
 
 test("testing postReviews adds something to database", t => {
